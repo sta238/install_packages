@@ -45,16 +45,6 @@ ui <- shinyUI(fluidPage(
                       ae_nums, "</a></li>"),
                "</ul></div>")
       )     
-    ),
-    column(
-      6,
-      h2("Analysis Exercises"),
-      HTML(
-        paste0("<div><ul>",
-               paste0("<li><a href='", ae_links, "' target='_blank'>Analysis Exercises ", 
-                      ae_nums, "</a></li>"),
-               "</ul></div>")
-      )     
     )
   )
 ))
