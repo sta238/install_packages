@@ -2,7 +2,7 @@ library(shiny)
 
 
 ae_nums <- c("1")
-ae_sltns_nums <- c("1")
+#ae_sltns_nums <- c("1")
 
 ae_links <- paste0(
   "https://r.datatools.utoronto.ca/hub/user-redirect/git-pull?",
