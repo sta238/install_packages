@@ -2,6 +2,7 @@ library(shiny)
 
 
 ae_nums <- c("1")
+ae_sltns_nums <- c("1")
 
 ae_links <- paste0(
   "https://r.datatools.utoronto.ca/hub/user-redirect/git-pull?",
@@ -12,6 +13,14 @@ ae_links <- paste0(
   "%2F&branch=main"
 )
 
+ae_sltns_links <- paste0(
+  "https://r.datatools.utoronto.ca/hub/user-redirect/git-pull?",
+  "repo=https%3A%2F%2Fgithub.com%2Fsta238%2Fae",
+  ae_sltns_nums,
+  "_solutions&urlpath=shiny%2Fae",
+  ae_sltns_nums,
+  "_solutions%2F&branch=main"
+)
 
 server <- function(input, output) {
   output$result <- renderText({
@@ -43,6 +52,16 @@ ui <- shinyUI(fluidPage(
         paste0("<div><ul>",
                paste0("<li><a href='", ae_links, "' target='_blank'>AE", 
                       ae_nums, "</a></li>"),
+               "</ul></div>")
+      )     
+    ),
+    column(
+      6,
+      h2("Solutions"),
+      HTML(
+        paste0("<div><ul>",
+               paste0("<li><a href='", ae_sltns_links, "' target='_blank'>AE", 
+                      ae_sltns_nums, "_solutions</a></li>"),
                "</ul></div>")
       )     
     )
